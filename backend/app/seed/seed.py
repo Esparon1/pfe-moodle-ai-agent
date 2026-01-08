@@ -20,9 +20,9 @@ def run_seed(db: Session):
 
     # --- courses
     courses = [
-        Course(code="INF101", name="Intro au génie logiciel"),
-        Course(code="DATA201", name="Data & BI Foundations"),
-        Course(code="FIN305", name="Fintech Analytics"),
+        Course(code="INF101", name="Intro au génie logiciel",instructor_id=prof1.id),
+        Course(code="DATA201", name="Data & BI Foundations",instructor_id=prof1.id),
+        Course(code="FIN305", name="Fintech Analytics",instructor_id=prof2.id),
     ]
     db.add_all(courses)
     db.flush()
